@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Advisor from "./pages/Advisor";
 import Portfolio from "./pages/Portfolio";
 import LoginPage from "./pages/LoginPage";
+import SettingsPage from "./pages/SettingsPage";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                         <Route path="/advisor" element={<Advisor />} />
                         <Route path="/portfolio" element={<Portfolio />} />
                         <Route path="/login" element={<LoginPage />} />
+                        <Route path="/settings" element={<SettingsPage />} />
                     </Routes>
                 </Header>
             </BrowserRouter>
