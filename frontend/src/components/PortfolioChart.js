@@ -10,7 +10,6 @@ import {
     Title
 } from "chart.js";
 import { Pie } from "react-chartjs-2";
-import { useState } from "react";
 
 ChartJS.register(
     ArcElement,
