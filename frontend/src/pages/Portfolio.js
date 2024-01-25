@@ -4,7 +4,7 @@ import Header from "../components/Header";
 export default function Portfolio() {
     return (
         <div>
-            <Header />
+            <Header active="portfolio"/>
             <div className="mt-40 flex min-w-[900px] justify-center">
             <PortfolioChart />
             </div>

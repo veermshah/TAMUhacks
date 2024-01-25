@@ -32,7 +32,8 @@ export default function Home() {
     }, []);
     return (
         <>
-            <Header />
+        <div>
+            <Header active="home" />
             <div className="App">
                 <section class="parallax">
                     <img src="hill1.png" id="hill1" />
@@ -67,6 +68,8 @@ export default function Home() {
                     <a href="/advisor">Begin here</a>
                 </section>
             </div>
+            </div>
         </>
+
     );
 }
