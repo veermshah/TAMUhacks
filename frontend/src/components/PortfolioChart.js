@@ -53,7 +53,7 @@ function PortfolioChart() {
     return (
         <div className="App">
             <h1>Portfolio Chart Below</h1>
-            <div className="p-2 max-w-[400px]">
+            <div className="p-2 max-w-[600px]">
                 <Pie data={data}></Pie>
             </div>
         </div>
