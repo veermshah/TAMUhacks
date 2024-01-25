@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
     useEffect(() => {
@@ -63,6 +64,7 @@ export default function Home() {
                     <br />
                     <br />
                     <br />
+                    <a href="/advisor">Begin here</a>
                 </section>
             </div>
         </>

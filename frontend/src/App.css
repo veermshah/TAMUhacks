@@ -91,3 +91,19 @@ header {
     color: #fff;
     font-weight: 300;
 }
+
+.sec a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    background: #fff;
+}
+
+.sec a:hover, .navigation a.active {
+    background: #359381;
+    color: #fff;
+}
