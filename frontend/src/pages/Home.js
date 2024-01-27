@@ -2,8 +2,17 @@ import React from "react";
 import { useEffect } from "react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
+import Typewriter from "typewriter-effect";
+import { Howl, Howler } from "howler";
+import { motion } from "framer-motion";
 
 export default function Home() {
+    // const sound = new Howl({
+    //     src: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
+    // });
+    // sound.play();
+    // Howler.volume(0.25);
+
     useEffect(() => {
         let text = document.getElementById("text");
         let leaf = document.getElementById("leaf");
@@ -16,7 +25,7 @@ export default function Home() {
 
             if (text !== null) {
                 // Set a maximum scroll limit (adjust the limit as needed)
-                const maxScroll = 500;
+                const maxScroll = 400;
 
                 // Apply the scroll transformations only if within the limit
                 if (value <= maxScroll) {
@@ -32,44 +41,70 @@ export default function Home() {
     }, []);
     return (
         <>
-        <div>
-            <Header active="home" />
-            <div className="App">
-                <section class="parallax">
-                    <img src="hill1.png" id="hill1" />
-                    <img src="hill2.png" id="hill2" />
-                    <img src="hill3.png" id="hill3" />
-                    <img src="hill4.png" id="hill4" />
-                    <img src="hill5.png" id="hill5" />
-                    <img src="tree.png" id="tree" />
-                    <h2 id="text" className="font-bold">
-                        RoboAdvisor
-                    </h2>
-                    <img src="leaf.png" id="leaf" />
-                    <img src="plant.png" id="plant" />
-                </section>
+            <div>
+                <Header active="home" />
+                <div className="App">
+                    <section class="parallax">
+                        <img src="hill1.png" id="hill1" />
+                        <img src="hill2.png" id="hill2" />
+                        <img src="hill3.png" id="hill3" />
+                        <img src="hill4.png" id="hill4" />
+                        <img src="hill5.png" id="hill5" />
+                        <img src="tree.png" id="tree" />
+                        <h2 id="text" className="font-bold">
+                            Moneyplant
+                            <section>
+                                <Typewriter
+                                    options={{
+                                        strings: [
+                                            "RoboAdvising.",
+                                            "Automatic Trading.",
+                                            "Financial Peace.",
+                                        ],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+                            </section>
+                        </h2>
 
-                <section class="sec">
-                    <br />
-                    <br />
-                    <br />
-                    <h1>About</h1>
-                    <br />
-                    <br />
-                    <p>
-                        Lorem ipsum dolor sit amet onsectetur adipisicing eit.
-                        Quisquam, voluptatum. Quisquam, voluptatum.
-                    </p>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <a href="/advisor">Begin here</a>
-                </section>
+                        <img src="leaf.png" id="leaf" />
+                        <img src="plant.png" id="plant" />
+                    </section>
+
+                    <section class="sec">
+                        <br />
+                        <br />
+                        <br />
+                        <h1>About</h1>
+                        <br />
+                        <br />
+                        <p>
+                            Lorem ipsum dolor sit amet onsectetur adipisicing
+                            eit. Quisquam, voluptatum. Quisquam, voluptatum.
+                        </p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <a href="/advisor">Get Started</a>
+                    </section>
+                </div>
             </div>
+            <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+                <div className="w-[35px] h-[64px] rounded-3xl border-4 border-white flex justify-center items-start p-2">
+                    <motion.dev
+                        animate={{ y: [0, 24, 0] }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 1.5,
+                            repeatType: "loop",
+                        }}
+                        className="w-3 h-3 rounded-full bg-white mb-1"
+                    />
+                </div>
             </div>
         </>
-
     );
 }

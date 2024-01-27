@@ -2,7 +2,7 @@ export default function Header(props) {
     return (
         <>
             <header>
-                <h2 class="logo">RoboAdvisor</h2>
+                <h2 class="logo">Moneyplant</h2>
                 <nav class="navigation">
                     <a href="/home" class={"home" === props.active ? "active" : null }>
                         Home
