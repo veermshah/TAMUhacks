@@ -1,26 +1,40 @@
-import Header from "../components/Header.js";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import "../FullScreenModal.css"; // Import your CSS file for styling
+import Header from "../components/Header";
+import BreatheAnimation from "../components/BreatheAnimation";
 
-export default function Advisor() {
-    const navigate = useNavigate();
+const FullScreenModal = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+
     useEffect(() => {
-        const url = "http://localhost:8000/api/customers/";
-        fetch(url)
-            .then((response) => {
-                if(response.status === 401){
-                    navigate("/login")
-                }
-                return response.json();
-            })
-            .then((data) => {
-                console.log(data);
-            });
-    }, []);
+        // Open the modal when the component mounts
+        setModalOpen(true);
+
+        // Optionally, you can close the modal after a certain duration
+        const timeout = setTimeout(() => {
+            setModalOpen(false);
+        }, 5000); // Close the modal after 5 seconds
+
+        // Clear the timeout on component unmount to avoid memory leaks
+        return () => clearTimeout(timeout);
+    }, []); // The empty dependency array ensures that this effect runs only once on mount
+
+    const toggleModal = () => {
+        setModalOpen(!modalOpen);
+    };
+
     return (
-        <div>
-            <h1 className="flex justify-center mt-48">Advisor Page</h1>
-            <Header active="advisor"/>
+        <div className="app">
+            <Header active="advisor" />
+            {modalOpen && (
+                <div className="fullscreen-modal">
+                    <div className="modal-content">
+                        <BreatheAnimation />                        
+                    </div>
+                </div>
+            )}
         </div>
     );
-}
+};
+
+export default FullScreenModal;
