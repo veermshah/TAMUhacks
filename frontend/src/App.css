@@ -74,6 +74,13 @@ header {
     pointer-events: none;
 }
 
+.parallax section {
+    position: absolute;
+    font-size: 3rem;
+    color: #75f3ff;
+}
+
+
 .sec {
     position: relative;
     background: #003329;
