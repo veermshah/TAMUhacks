@@ -17,8 +17,13 @@ Including another URLconf
 from django.contrib import admin 
 from django.urls import path
 import Mpapi.views as views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('portfolios/', views.portfolio_list),
+    path('portfolios/<int:id>', views.portfolio_detail),
+    # path('portfolios/<str:name>', views.portfolio_detail),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
