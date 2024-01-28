@@ -3,16 +3,9 @@ import { useEffect } from "react";
 import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
-import { Howl, Howler } from "howler";
 import { motion } from "framer-motion";
 
 export default function Home() {
-    // const sound = new Howl({
-    //     src: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
-    // });
-    // sound.play();
-    // Howler.volume(0.25);
-
     useEffect(() => {
         let text = document.getElementById("text");
         let leaf = document.getElementById("leaf");
@@ -80,8 +73,13 @@ export default function Home() {
                         <br />
                         <br />
                         <p>
-                            Lorem ipsum dolor sit amet onsectetur adipisicing
-                            eit. Quisquam, voluptatum. Quisquam, voluptatum.
+                            Money Plant is a comprehensive financial platform
+                            with a robo-advisor feature. It analyzes stock data
+                            from the last ten years while also considering
+                            market changes in the last month to provide
+                            personalized investment advice. Our goal is to help
+                            you make informed decisions and achieve your
+                            financial objectives.
                         </p>
                         <br />
                         <br />

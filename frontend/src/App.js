@@ -1,15 +1,19 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
 import Home from "./pages/Home";
 import Advisor from "./pages/Advisor";
 import Portfolio from "./pages/Portfolio";
 import LoginPage from "./pages/LoginPage";
-import SettingsPage from "./pages/SettingsPage";
 import Register from "./pages/Register";
+import { Howl, Howler } from "howler";
+import natureMusic from "./natureMusic.mp3";
 
 function App() {
-    
+    var sound = new Howl({
+        src: [natureMusic],
+    });
+    sound.play();
+    Howler.volume(0.15);
 
     return (
         <div className="App">
@@ -23,8 +27,6 @@ function App() {
                     <Route path="/register" element={<Register />} />
                 </Routes>
             </BrowserRouter>
-            
-            
         </div>
     );
 }
