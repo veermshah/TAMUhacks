@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import BackgroundVideo from "../components/Background";
+import BackgroundVideo from "../components/BackgroundVideo";
 
 export default function LoginPage() {
     const navigate = useNavigate();
@@ -36,7 +36,7 @@ export default function LoginPage() {
     return (
         <>
             <Header active="login" />
-            {/* <BackgroundVideo /> */}
+            <BackgroundVideo />
             <form
                 className="flex flex-col items-center justify-center mt-48"
                 onSubmit={login}
