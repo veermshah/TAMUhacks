@@ -9,10 +9,12 @@ from scipy import optimize
 # ..weights = list of doubles, same length as assetClasses
 # ..riskAversion = double
 # ..covMatrix = covariance matrix of expected excess returns for assetClasses
+
+
 class Portfolio:
     def __init__(self, 
         assetClasses=('Communication Services','Consumer Discretionary','Consumer Staples','Energy','Financials','Health Care','Industrials','Information Technology','Materials','Real Estate','Utilities'),
-        assetWeights=[0.1,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09],
+        assetWeights=[0.09,0.1,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09,0.09],
         riskAversion=2.5,
         covMatrix=None
     ):
