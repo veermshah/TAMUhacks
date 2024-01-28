@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from moneyplantBackend.models import Customer
+from moneyplantBackend.models import Customer, Portfolio
 from django.contrib.auth.models import User
 
 class CustomerSerializer(serializers.ModelSerializer):
@@ -21,3 +21,8 @@ class UserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         return user
+
+class PortfolioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Portfolio
+        fields = '__all__'
