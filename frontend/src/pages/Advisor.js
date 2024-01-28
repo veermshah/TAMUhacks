@@ -22,11 +22,14 @@ const Advisor = () => {
         });
     };
 
+    function scaleValue(originalValue, minOriginal, maxOriginal, minScaled, maxScaled) {
+        return ((originalValue - minOriginal) / (maxOriginal - minOriginal)) * (maxScaled - minScaled) + minScaled;
+      }
+
     const handleSubmit = () => {
-        console.log("Selected Options:", selectedOptions); // Log the selectedOptions
         const sumOfIndices = selectedOptions.reduce((acc, value) => acc + value, 0);
-        console.log("Sum of Selected Indices:", sumOfIndices);
-        // Add logic here to handle the selected options, e.g., send them to the server
+        const scaledValue = scaleValue(sumOfIndices, 0, 17, 1, 10);
+        console.log(scaledValue);
     };
 
     const questionsData = [
