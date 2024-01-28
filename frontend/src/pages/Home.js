@@ -71,19 +71,78 @@ export default function Home() {
                         <br />
                         <h1>About</h1>
                         <br />
-                        <br />
+                        <h3>
+                            Money Plant is a comprehensive financial platform:
+                        </h3>
                         <p>
-                            Money Plant is a comprehensive financial platform
-                            with a robo-advisor feature. It analyzes stock data
-                            from the last ten years while also considering
-                            market changes in the last month to provide
-                            personalized investment advice. Our goal is to help
-                            you make informed decisions and achieve your
-                            financial objectives.
+                            This part of the statement highlights that Money
+                            Plant is not just a simple financial tool; it offers
+                            a wide range of features and services that cover
+                            various aspects of finance. The term "comprehensive"
+                            suggests that it provides a thorough and inclusive
+                            approach to financial services.
                         </p>
                         <br />
+                        <h3>with a robo-advisor feature:</h3>
+                        <p>
+                            Here, the mention of a "robo-advisor feature"
+                            indicates that Money Plant incorporates automated,
+                            algorithm-driven tools to assist users in making
+                            financial decisions. A robo-advisor typically uses
+                            algorithms to analyze data and provide investment
+                            advice tailored to individual users.
+                        </p>
                         <br />
+                        <h3>It analyzes stock data from the last ten years:</h3>
+                        <p>
+                            This part emphasizes a data-driven approach by
+                            stating that Money Plant looks at historical stock
+                            data spanning the last ten years. Analyzing
+                            long-term data can provide insights into a stock's
+                            performance over various market conditions.
+                        </p>
                         <br />
+                        <h3>
+                            while also considering market changes in the last
+                            month:
+                        </h3>
+                        <p>
+                            In addition to historical data, Money Plant takes
+                            into account recent market changes, specifically
+                            those occurring in the last month. This implies that
+                            the platform is designed to be dynamic and
+                            responsive to current market conditions.
+                        </p>
+                        <br />
+                        <h3>to provide personalized investment advice:</h3>
+                        <p>
+                            The ultimate goal of Money Plant is to offer
+                            personalized investment advice. By combining
+                            historical data analysis with recent market changes,
+                            the platform aims to generate recommendations that
+                            align with the unique financial goals and risk
+                            tolerance of individual users.
+                        </p>
+                        <br />
+                        <h3>
+                            Our goal is to help you make informed decisions and
+                            achieve your financial objectives:
+                        </h3>
+                        <p>
+                            This part underlines the overarching objective of
+                            Money Plant, which is to empower users to make
+                            informed decisions in their financial journey. The
+                            platform aims to assist users in achieving their
+                            specific financial objectives, whether it be wealth
+                            accumulation, retirement planning, or any other
+                            financial goal. In summary, Money Plant positions
+                            itself as a sophisticated financial platform with a
+                            robo-advisor feature. It leverages extensive
+                            historical stock data and recent market changes to
+                            offer personalized investment advice, ultimately
+                            aiming to guide users toward making informed
+                            decisions and reaching their financial objectives.
+                        </p>
                         <br />
                         <br />
                         <a href="/advisor">Get Started</a>
