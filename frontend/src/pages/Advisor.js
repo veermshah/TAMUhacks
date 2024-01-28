@@ -28,8 +28,8 @@ const Advisor = () => {
 
     const handleSubmit = () => {
         const sumOfIndices = selectedOptions.reduce((acc, value) => acc + value, 0);
-        const scaledValue = scaleValue(sumOfIndices, 0, 17, 1, 10);
-        console.log(scaledValue);
+        const scaledValue = scaleValue(sumOfIndices, 0, 17, 5, 50);
+        localStorage.setItem("risk", scaledValue);
     };
 
     const questionsData = [
@@ -83,24 +83,24 @@ const Advisor = () => {
 
     function sendIt(e) {}
 
-    useEffect(() => {
-        const url = "http://localhost:8000/api/portfolio/";
-        fetch(url, {
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: "Bearer " + localStorage.getItem("refresh"),
-            },
-        })
-            .then((response) => {
-                if (response.status === 401) {
-                    navigate("/login");
-                }
-                return response.json();
-            })
-            .then((data) => {
-                console.log(data);
-            });
-    }, []);
+    // useEffect(() => {
+    //     const url = "http://localhost:8000/api/portfolio/";
+    //     fetch(url, {
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             Authorization: "Bearer " + localStorage.getItem("refresh"),
+    //         },
+    //     })
+    //         .then((response) => {
+    //             if (response.status === 401) {
+    //                 navigate("/login");
+    //             }
+    //             return response.json();
+    //         })
+    //         .then((data) => {
+    //             console.log(data);
+    //         });
+    // }, []);
 
     useEffect(() => {
         // Open the modal when the component mounts
@@ -122,13 +122,13 @@ const Advisor = () => {
     return (
         <div className="app">
             <Header active="advisor" />
-            {/* {modalOpen && (
+            {modalOpen && (
                 <div className="fullscreen-modal">
                     <div className="modal-content">
                         <BreatheAnimation />
                     </div>
                 </div>
-            )} */}
+            )}
 
             <div className="max-h-[575px] mt-40">
                 <h1 className="text-3xl font-bold mb-4">
@@ -146,13 +146,14 @@ const Advisor = () => {
                         />
                     ))}
                 </div>
-                <button
+                <a
                     type="submit"
                     onClick={handleSubmit}
+                    href={"/portfolio"}
                     className="my-8 text-white hover:bg-[#359381] bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                     Submit
-                </button>
+                </a>
             </div>
         </div>
     );
